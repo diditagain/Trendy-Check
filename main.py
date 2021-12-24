@@ -11,9 +11,9 @@ load_dotenv()
 
 url= requests.get(os.getenv("ITEM_URL")) ## Item Url Inside  
 
-email = os.getenv("EMAIL")  ## YOUR UNSAFE EMAIL
-email_password = os.getenv("EMAIL_PASSWORD") ##PASSWORD OF UNSAFE EMAIL
-to_email = os.getenv("TO_EMAIL") ## YOUR EMAIL
+email = os.getenv("EMAIL")  ## YOUR UNSAFE EMAIL "example@example.com"
+email_password = os.getenv("EMAIL_PASSWORD") ##PASSWORD OF UNSAFE EMAIL "randompassword"
+to_email = os.getenv("TO_EMAIL") ## YOUR EMAIL "myemail@email.com"
 
 
 raw_html = url.text
