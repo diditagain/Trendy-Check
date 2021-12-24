@@ -8,17 +8,19 @@ load_dotenv()
 
 
 
+## Item Url Inside
+url= requests.get(os.getenv("ITEM_URL"))   
 
-url= requests.get(os.getenv("ITEM_URL")) ## Item Url Inside  
+## YOUR UNSAFE EMAIL "example@example.com"
+email = os.getenv("EMAIL")  
 
-email = os.getenv("EMAIL")  ## YOUR UNSAFE EMAIL "example@example.com"
-email_password = os.getenv("EMAIL_PASSWORD") ##PASSWORD OF UNSAFE EMAIL "randompassword"
-to_email = os.getenv("TO_EMAIL") ## YOUR EMAIL "myemail@email.com"
+##PASSWORD OF UNSAFE EMAIL "randompassword"
+email_password = os.getenv("EMAIL_PASSWORD") 
 
+## YOUR EMAIL "myemail@email.com"
+to_email = os.getenv("TO_EMAIL") 
 
 raw_html = url.text
-
-
 
 soup = BeautifulSoup(raw_html, "html.parser")
 
